@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Lecturer Profile
+{% endblock %}
+
+{% block content %}
+    <h2>Lecturer Profile</h2>
+    <p>Employee Number: {{ lecturer.employee_number }}</p>
+    <p>Full Name: {{ lecturer.full_name }}</p>
+    <p>Contact Number: {{ lecturer.contact_number }}</p>
+    <p>Email: {{ lecturer.email }}</p>
+    <p>Other Biodata Fields: {{ lecturer.other_biodata_fields }}</p>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Lecturer Dashboard</h1>
+    <h2>Welcome, {{ request.user.lecturer.full_name }}</h2>
+
+    <h3>Your Courses:</h3>
+    <ul>
+        {% for course in courses %}
+            <li>
+                Course: {{ course.course_name }}
+                <br>
+                Number of Registered Students: {{ course.students.count }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

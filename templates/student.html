@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                {% comment %} <li><a href="{% url 'home' %}">Home</a></li> {% endcomment %}
+                {% comment %} <li><a href="{% url 'profile' %}">Profile</a></li> {% endcomment %}
+                <li><a href="{% url 'course_registration' %}">Register Course</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcome, {{ user.username }}!</h1>
+        <!-- Add the content of the student dashboard here -->
+    </main>
+
+    <footer>
+        <!-- Add footer content here -->
+    </footer>
+</body>
+</html>

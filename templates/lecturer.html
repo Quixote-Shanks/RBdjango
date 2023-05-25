@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lecturer Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, {{ lecturer.full_name }}</h1>
+    <h2>Employee Number: {{ lecturer.employee_number }}</h2>
+    <h3>Contact Number: {{ lecturer.contact_number }}</h3>
+    <h3>Email: {{ lecturer.email }}</h3>
+    
+    <h2>My Courses:</h2>
+    {% if lecturer.courses.all %}
+        <ul>
+        {% for course in lecturer.courses.all %}
+            <li><a href="{% url 'course_details' course_id=course.id %}">{{ course.course_name }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No courses assigned.</p>
+    {% endif %}
+</body>
+</html>
